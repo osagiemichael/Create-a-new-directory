@@ -1,0 +1,25 @@
+┌──(kali㉿kali)-[~]
+└─$ mkdir cleanup         
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ for i in {1..5}; do touch ~/cleanup/file$i.txt
+for> done                    
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/cleanup
+total 0
+-rw-rw-r-- 1 kali kali 0 Feb 10 15:56 file1.txt
+-rw-rw-r-- 1 kali kali 0 Feb 10 15:56 file2.txt
+-rw-rw-r-- 1 kali kali 0 Feb 10 15:56 file3.txt
+-rw-rw-r-- 1 kali kali 0 Feb 10 15:56 file4.txt
+-rw-rw-r-- 1 kali kali 0 Feb 10 15:56 file5.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ rm ~/cleanup/file2.txt ~/cleanup/file4.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/cleanup                              
+total 0
+-rw-rw-r-- 1 kali kali 0 Feb 10 15:56 file1.txt
+-rw-rw-r-- 1 kali kali 0 Feb 10 15:56 file3.txt
+-rw-rw-r-- 1 kali kali 0 Feb 10 15:56 file5.txt

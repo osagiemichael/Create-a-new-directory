@@ -1,0 +1,30 @@
+┌──(kali㉿kali)-[~]
+└─$ mkdir -p project/draft project/final
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/project
+total 8
+drwxrwxr-x 2 kali kali 4096 Feb 10 17:58 draft
+drwxrwxr-x 2 kali kali 4096 Feb 10 17:58 final
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ touch ~/project/draft/report.txt           
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ nano ~/project/draft/report.txt       
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ cat ~/project/draft/report.txt
+writing scripts has become interesting
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ mv ~/project/draft/report.txt ~/project/final
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/project/final
+total 4
+-rw-rw-r-- 1 kali kali 39 Feb 10 18:00 report.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/project/draft
+total 0

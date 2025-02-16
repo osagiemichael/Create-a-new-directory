@@ -1,0 +1,33 @@
+Moving and Renaming a File Without Navigation
+*	Create a directory organize.
+*	Inside it, create a subdirectory unsorted.
+*	Inside unsorted, create a file named notes.txt.
+*	Move notes.txt to organize and rename it to final_notes.txt without using cd.
+*	Verify the file exists in organize with the new name.
+
+
+┌──(kali㉿kali)-[~]
+└─$ mkdir organize 
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ mkdir ~/organize/unsorted
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/organize       
+total 4
+drwxrwxr-x 2 kali kali 4096 Feb 14 19:49 unsorted
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ touch ~/organize/unsorted/note.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ nano ~/organize/unsorted/note.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ mv ~/organize/unsorted/note.txt ~/organize/final_notes.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/organize                                             
+total 8
+-rw-rw-r-- 1 kali kali   43 Feb 14 19:51 final_notes.txt
+drwxrwxr-x 2 kali kali 4096 Feb 14 19:52 unsorted

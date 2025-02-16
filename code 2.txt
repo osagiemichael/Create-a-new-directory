@@ -1,0 +1,29 @@
+Copying *Files Between Directories Without Changing Location
+	*Create two directories: source_dir and destination_dir.
+	*Inside source_dir, create a file called copy_me.txt.
+	*Copy copy_me.txt to destination_dir without navigating into either directory.
+	*Confirm that copy_me.txt exists in destination_dir.
+
+
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ mkdir source_dir destination_dir
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ touch ~/source_dir/copy_me.txt    
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ nano ~/source_dir/copy_me.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ cp ~/source_dir/copy_me.txt ~/destination_dir
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/source_dir   
+total 4
+-rw-rw-r-- 1 kali kali 54 Feb 14 19:24 copy_me.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/destination_dir
+total 4
+-rw-rw-r-- 1 kali kali 54 Feb 14 19:25 copy_me.txt

@@ -1,0 +1,41 @@
+Creating and Deleting Multiple Files Without Changing Directory
+*	Create a directory bulk_test.
+*	Inside it, create 10 files named test1.txt to test10.txt.
+*	Delete test3.txt, test6.txt, and test9.txt without navigating into bulk_test.
+*	Confirm that only these files are removed.
+
+
+┌──(kali㉿kali)-[~]
+└─$ mkdir bulk_test
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ for i in {1..10}; do touch ~/bulk_test/test$i.txt
+done  
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/bulk_test
+total 0
+-rw-rw-r-- 1 kali kali 0 Feb 14 19:46 test10.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 19:46 test1.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 19:46 test2.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 19:46 test3.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 19:46 test4.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 19:46 test5.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 19:46 test6.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 19:46 test7.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 19:46 test8.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 19:46 test9.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ rm ~/bulk_test/test3.txt ~/bulk_test/test6.txt ~/bulk_test/test9.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/bulk_test                                                      
+total 0
+-rw-rw-r-- 1 kali kali 0 Feb 14 19:46 test10.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 19:46 test1.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 19:46 test2.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 19:46 test4.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 19:46 test5.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 19:46 test7.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 19:46 test8.txt

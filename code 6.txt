@@ -1,0 +1,34 @@
+Listing Hidden and Non-Hidden Files Separately
+*	Create a directory visibility_test.
+*	Inside it, create three normal files: fileA.txt, fileB.txt, fileC.txt.
+*	Also, create two hidden files: .hidden1 and .hidden2.
+*	Without navigating into visibility_test, list only the hidden files.
+*	Then, list only the non-hidden files.
+
+┌──(kali㉿kali)-[~]
+└─$ mkdir visibility_test
+┌──(kali㉿kali)-[~]
+└─$ for i in {A..C}; do touch ~/visibility_test/file$i.txt
+done  
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/visibility_test
+total 0
+-rw-rw-r-- 1 kali kali 0 Feb 14 22:35 fileA.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 22:35 fileB.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 22:35 fileC.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ touch ~/visibility_test/.myhidden1 ~/visibility_test/.myhidden2
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/visibility_test
+total 0
+-rw-rw-r-- 1 kali kali 0 Feb 14 22:35 fileA.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 22:35 fileB.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 22:35 fileC.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/visibility_test/.*
+-rw-rw-r-- 1 kali kali 0 Feb 14 22:39 /home/kali/visibility_test/.myhidden1
+-rw-rw-r-- 1 kali kali 0 Feb 14 22:39 /home/kali/visibility_test/.myhidden2

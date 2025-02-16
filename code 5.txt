@@ -1,0 +1,41 @@
+Archiving and Extracting Without Navigating
+*	Create a directory archive_test.
+*	Inside it, create three files: doc1.txt, doc2.txt, doc3.txt.
+*	Without navigating into archive_test, compress these files into a .tar archive named backup.tar.
+*	Extract backup.tar into archive_test and confirm extraction.
+             
+                                                                            
+┌──(kali㉿kali)-[~]
+└─$ mkdir archive_test 
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ for i in {1..3}; do touch ~/archive_test/doc$i.txt
+done    
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/archive_test     
+total 0
+-rw-rw-r-- 1 kali kali 0 Feb 14 20:09 doc1.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 20:09 doc2.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 20:09 doc3.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ tar -cvzf backup.tar archive_test  
+archive_test/
+archive_test/doc1.txt
+archive_test/doc2.txt
+archive_test/doc3.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ tar -xvf backup.tar              
+archive_test/
+archive_test/doc1.txt
+archive_test/doc2.txt
+archive_test/doc3.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/archive_test
+total 0
+-rw-rw-r-- 1 kali kali 0 Feb 14 20:09 doc1.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 20:09 doc2.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 20:09 doc3.txt

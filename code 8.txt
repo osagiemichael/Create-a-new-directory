@@ -1,0 +1,48 @@
+Creating and Moving Multiple Files at Once
+*	Create a directory multi_move.
+*	Inside it, create a subdirectory source and another called destination.
+*	Inside source, create five files: alpha.txt, beta.txt, gamma.txt, delta.txt, epsilon.txt.
+*	Without navigating into source or destination, move all .txt files from source to destination.
+*	Confirm all files exist in destination and not in source.
+
+
+┌──(kali㉿kali)-[~]
+└─$ mkdir multi_move 
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ mkdir ~/multi_move/source ~/multi_move/destination
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/multi_move                             
+total 8
+drwxrwxr-x 2 kali kali 4096 Feb 14 23:11 destination
+drwxrwxr-x 2 kali kali 4096 Feb 14 23:11 source
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ for i in alpha beta gamma delta epsilon; do touch ~/multi_move/source/$i.txt
+for> done                    
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/multi_move/source                                                      
+total 0
+-rw-rw-r-- 1 kali kali 0 Feb 14 23:16 alpha.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 23:16 beta.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 23:16 delta.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 23:16 epsilon.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 23:16 gamma.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ mv ~/multi_move/source/*.txt ~/multi_move/destination     
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/multi_move/source                               
+total 0
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/multi_move/destination
+total 0
+-rw-rw-r-- 1 kali kali 0 Feb 14 23:16 alpha.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 23:16 beta.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 23:16 delta.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 23:16 epsilon.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 23:16 gamma.txt

@@ -1,0 +1,18 @@
+Creating Nested Directories and Printing Path
+     *Create a directory structure root/branch/leaf in a single command.
+     *Inside leaf, create a file named fruit.txt.
+     *Without navigating into leaf, print the absolute path of fruit.txt.
+
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ mkdir -p root/branch/leaf                    
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ touch ~/root/branch/leaf/fruit.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ nano ~/root/branch/leaf/fruit.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ cat ~/root/branch/leaf/fruit.txt
+Writing codes just became fun

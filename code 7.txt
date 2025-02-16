@@ -1,0 +1,32 @@
+Finding and Deleting Files Based on a Pattern
+*	Create a directory log_cleanup.
+*	Inside it, create five files: error1.log, error2.log, error3.log, report1.txt, report2.txt.
+*	Without navigating into log_cleanup, delete only the .log files.
+*	Verify that the .log files are gone while .txt files remain.
+
+
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ mkdir log_cleanup
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ for i in {1..3}; for x in {1..2}; do touch ~/log_cleanup/error$i.log ~/log_cleanup/re
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/log_cleanup
+total 0
+-rw-rw-r-- 1 kali kali 0 Feb 14 22:54 error1.log
+-rw-rw-r-- 1 kali kali 0 Feb 14 22:54 error2.log
+-rw-rw-r-- 1 kali kali 0 Feb 14 22:54 error3.log
+-rw-rw-r-- 1 kali kali 0 Feb 14 22:54 report1.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 22:54 report2.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ rm ~/log_cleanup/*.log                                              
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/log_cleanup      
+total 0
+-rw-rw-r-- 1 kali kali 0 Feb 14 22:54 report1.txt
+-rw-rw-r-- 1 kali kali 0 Feb 14 22:54 report2.txt
+                                                   

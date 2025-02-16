@@ -1,0 +1,26 @@
+┌──(kali㉿kali)-[~]
+└─$ mkdir -p one/two/three
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ touch ~/one/two/three/file_in_three.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ nano ~/one/two/three/file_in_three.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ cat ~/one/two/three/file_in_three.txt
+coding is interesting
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ cd one                               
+                                                                                         
+┌──(kali㉿kali)-[~/one]
+└─$ cd two  
+                                                                                         
+┌──(kali㉿kali)-[~/one/two]
+└─$ cd three
+                                                                                         
+┌──(kali㉿kali)-[~/one/two/three]
+└─$ ll
+total 4
+-rw-rw-r-- 1 kali kali 22 Feb 10 15:42 file_in_three.txt

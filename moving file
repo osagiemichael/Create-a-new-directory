@@ -1,0 +1,20 @@
+┌──(kali㉿kali)-[~]
+└─$ mkdir dirA dirB   
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ touch ~/dirA/fileA.txt      
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ nano ~/dirA/fileA.txt      
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ mv ~/dirA/fileA.txt ~/dirB
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/dirA                 
+total 0
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/dirB
+total 4
+-rw-rw-r-- 1 kali kali 25 Feb 10 15:11 fileA.txt

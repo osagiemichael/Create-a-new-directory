@@ -1,0 +1,15 @@
+──(kali㉿kali)-[~]
+└─$ mkdir alpha          
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ mkdir ~/alpha/beta  
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ touch ~/alpha/beta/gamma.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ nano ~/alpha/beta/gamma.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ cat ~/alpha/beta/gamma.txt
+refreshing my coding skills

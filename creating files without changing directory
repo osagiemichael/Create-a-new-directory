@@ -1,0 +1,11 @@
+┌──(kali㉿kali)-[~]
+└─$ mkdir backup             
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ touch ~/backup/data1.txt ~/backup/data2.txt
+                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ ll ~/backup 
+total 0
+-rw-rw-r-- 1 kali kali 0 Feb 10 17:55 data1.txt
+-rw-rw-r-- 1 kali kali 0 Feb 10 17:55 data2.txt

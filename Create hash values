@@ -1,0 +1,27 @@
+analyst@01dcc7df658e:~$ ls
+file1.txt  file2.txt
+analyst@01dcc7df658e:~$ cat file1.txt
+X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+analyst@01dcc7df658e:~$ cat file2.txt
+X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+9sxa5Yq20Ranalyst@01dcc7df658e:~$ sha256sum file1.txt
+131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267  file1.txt
+analyst@01dcc7df658e:~$ sha256sum file2.txt
+2558ba9a4cad1e69804ce03aa2a029526179a91a5e38cb723320e83af9ca017b  file2.txt
+analyst@01dcc7df658e:~$ sha256sum file1.txt >> file1hash
+analyst@01dcc7df658e:~$ sha256sum file1.txt >> file2hash
+analyst@01dcc7df658e:~$ sha256sum file2.txt >> file2hash
+analyst@01dcc7df658e:~$ sha256sum file1.txt >> file1hash
+analyst@01dcc7df658e:~$ cat file1hash
+131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267  file1.txt
+131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267  file1.txt
+analyst@01dcc7df658e:~$ cat file2hash
+131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267  file1.txt
+2558ba9a4cad1e69804ce03aa2a029526179a91a5e38cb723320e83af9ca017b  file2.txt
+analyst@01dcc7df658e:~$ cat file2hash file1hash
+131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267  file1.txt
+2558ba9a4cad1e69804ce03aa2a029526179a91a5e38cb723320e83af9ca017b  file2.txt
+131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267  file1.txt
+131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267  file1.txt
+analyst@01dcc7df658e:~$ cmp file1hash file2hash
+file1hash file2hash differ: char 77, line 2
